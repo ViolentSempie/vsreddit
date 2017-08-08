@@ -422,7 +422,11 @@ label {
     content: "\f03d";
 }
 
-.expando-button.video:before {
+.link[data-domain="youtube.com"] .expando-button.video:before {
+    content: "\f167";
+}
+
+.link[data-domain="twitch.tv"] .expando-button.video:before {
     content: "\f1e8";
 }
 
