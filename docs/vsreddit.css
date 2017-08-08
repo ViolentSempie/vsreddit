@@ -422,7 +422,7 @@ label {
     content: "\f03d";
 }
 
-.link[data-domain="youtube.com"] .expando-button.video:before {
+.link .expando-button.video:before {
     content: "\f167";
 }
 
