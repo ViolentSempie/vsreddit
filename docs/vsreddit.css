@@ -531,3 +531,27 @@ label {
 .expando, .res-expando-box {
     margin-bottom: 30px;
 }
+
+.RESDropdownList {
+    z-index: 2147483646 !important;
+    right: 15px !important;
+    left: auto !important;
+    bottom: 50px !important;
+    top: auto !important;
+    background: rgb(40,40,40) !important;
+    border-color: rgb(153, 153, 153) rgb(153, 153, 153) rgb(153, 153, 153) !important;
+}
+
+.RESDropdownList li {
+    border-bottom: 1px solid rgb(153, 153, 153) !important;
+    color: rgb(153, 153, 153) !important;
+}
+
+.RESDropdownList li:hover, .RESDropdownList a:hover {
+    background-color: rgb(153, 153, 153) !important;
+    color: rgb(40, 40, 40) !important;
+}
+
+.optionTitle {
+    max-width: 200px;
+}
