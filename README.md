@@ -21,7 +21,7 @@ Visual Studio Reddit, A Reddit skin for GreaseMonkey
     'use strict';
     var link = document.createElement('LINK');
     link.rel = 'stylesheet';
-    link.href = 'https:/rukiaxi.github.io/vsreddit/vsreddit.css';
+    link.href = 'https://rukiaxi.github.io/vsreddit/vsreddit.css';
     link.type = 'text/css';
     document.body.insertBefore(link, null);
 })();
