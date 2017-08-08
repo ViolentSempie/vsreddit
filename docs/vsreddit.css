@@ -160,7 +160,7 @@ body {
 
 .side {
     background-color: rgb(37, 37, 38);
-    width: 430px;
+    width: 350px;
     top: 35px;
     right: 0px;
     bottom: 22px;
@@ -214,7 +214,7 @@ body {
     top: 35px;
     bottom: 22px;
     left: 0;
-    right: 430px;
+    right: 350px;
     overflow: hidden;
     overflow-y: auto;
     margin: 0;
@@ -241,6 +241,8 @@ body {
     margin-bottom: 5px;
     border-radius: 5px;
     background: rgba(0, 0, 0, .1);
+    
+    overflow-x: auto !important;
 }
 
 body>.content .link .rank,
@@ -382,7 +384,7 @@ ul.tabmenu.formtab {
 
 #searchexpando select {
     float: right;
-    width: 250px;
+    width: 200px;
     margin-right: 20px;
 }
 
@@ -554,4 +556,10 @@ label {
 
 .optionTitle {
     max-width: 200px;
+}
+
+.res-media-rotatable {
+    margin-left: 0px !important;
+    margin-top: 5px !important;
+    margin-right: 5px !important;
 }
