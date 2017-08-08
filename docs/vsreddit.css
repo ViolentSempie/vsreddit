@@ -11,182 +11,151 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #212121;
-    color: #CAD3DE;
+    color: #cccccc;
 }
 
 .md {
-    color: #CAD3DE;
+    color: #cccccc;
 }
 
 
 /** HEADER **/
 
 #header {
-    height: 100px;
-    background: #002c53;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0;
 }
 
+#header-img,
 #header-img.default-header {
-    position: absolute;
-    right: 3px;
-    z-index: 999;
-    background-position: initial;
-    width: 61px;
-    height: 61px;
-    top: 1px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("https://rukiaxi.github.io/vsreddit/images/profile.jpg");
+    font-family: FontAwesome;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    background-image: none;
+    margin: 0;
+    text-indent: 0;
+}
+
+#header-img:before,
+#header-img.default-header:before {
+    content: "\f1a1";
+    font-size: 29px;
+    padding: 4px;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.498039);
 }
 
 #header-bottom-left {
-    position: absolute;
-    bottom: 0;
-    height: 69px;
-    padding: 10px;
-    right: 0;
-    left: 0;
-}
-
-.pagename {
-    position: absolute;
-    left: 20px;
-    top: -35px;
-    font-size: 30px;
-}
-
-.pagename a {
-    color: white;
-}
-
-.tabmenu li {
-    background-image: url("https://rukiaxi.github.io/vsreddit/images/border.png");
-    width: 90px;
-    height: 46px;
-    padding: 4px;
-    display: block;
-    float: left;
-}
-
-.tabmenu li:hover {
-    background-position-y: 46px;
-}
-
-.tabmenu li a,
-.tabmenu li.selected a {
-    padding: 0;
-    border: 0;
-    border-bottom: 0;
-    background: none;
-    line-height: 38px;
     width: 100%;
-    display: block;
-    text-align: center;
-    color: white;
+    height: 35px;
+    background-color: rgb(37, 37, 38);
+    padding: 0 10px 0 0;
+    box-shadow: #000000 0 6px 6px -6px;
 }
 
-.tabmenu li.res-show-images a {
-    line-height: initial;
-    white-space: pre-wrap;
+#header-bottom-left>* {
+    height: 35px;
+    margin: 0;
+}
+
+#header-bottom-left .pagename {
+    float: right;
+    line-height: 35px;
+    height: 35px;
+}
+
+#header-bottom-left .tabmenu li {
+    min-width: fit-content;
+    width: 120px;
+    text-align: center;
+    display: inline-block;
+    height: 35px;
+    padding: 0;
+    line-height: 35px;
+    margin: 0;
+}
+
+#header-bottom-left .tabmenu li a {
+    display: block;
+    height: 35px;
+    padding: 0 10px;
+    border: 1px solid transparent;
+    background-color: rgb(45, 45, 45);
+    border-left-color: rgb(37, 37, 38);
+    color: rgba(255, 255, 255, 0.498039);
+}
+
+#header-bottom-left .tabmenu li.selected a {
+    color: #fff;
+    background-color: rgb(33, 33, 33);
 }
 
 #header-bottom-right {
-    height: 70px;
-    width: 307px;
-    background-image: url("https://rukiaxi.github.io/vsreddit/images/bg-profile.png");
-    background-color: transparent;
-    bottom: 0 !important;
-    top: initial !important;
-    padding: 15px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 100% !important;
+    margin-top: -22px;
+    height: 22px;
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+    padding: 0 10px;
 }
 
-.user {
-    color: gray;
-    position: relative;
-    float: left;
-    width: 50%;
-    font-size: 0;
+#header-bottom-right>* {
+    display: inline-block;
+    line-height: 22px;
+    margin-right: 5px;
+    padding: 0 5px;
 }
 
-.user > * {
-    width: 100%;
-    position: relative;
-    float: left;
-    text-indent: 0;
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-.res-accountSwitcher-dropDownStyle-alien #RESAccountSwitcherIcon {
-    display: none !important;
-}
-
-.user > a {
-    font-size: 24px;
-    margin-top: 11px;
-    margin-right: 0 !important;
-    color: #333;
-}
-
-.userkarma a {
-    color: #333;
+#header-bottom-right>*:hover {
+    background-color: rgba(255, 255, 255, 0.12);
 }
 
 #header-bottom-right .separator {
     display: none;
 }
 
-#header-bottom-right #mail {
-    position: absolute;
-    left: 10px;
-    top: 8px;
-}
-
-#header-bottom-right a.message-count {
-    position: absolute;
-    left: 15px;
-    top: 11px;
-}
-
-#header-bottom-right #modmail {
-    position: absolute;
-    left: 34px;
-    top: 5px;
-}
-
-#header-bottom-right ul.flat-list {
-    position: absolute;
-    left: 55px;
-    top: 6px;
-}
-
-#header-bottom-right a,
-#header-bottom-right a:visited {
-    color: #333;
-}
-
 #header-bottom-right #openRESPrefs {
-    top: 6px;
-    position: absolute;
-    left: 115px;
+    float: right;
 }
 
-#header-bottom-right form.logout {
-    display: block;
-    position: absolute;
-    left: 133px;
-    top: 6px;
+#header-bottom-right .logout {
+    float: right;
+}
+
+#header-bottom-right a {
+    color: #fff;
+}
+
+#header-bottom-right .user {
+    font-size: 0;
+}
+
+#header-bottom-right .user * {
+    font-size: 10px;
 }
 
 
 /** SIDE MENU **/
 
 .side {
-    width: 25%;
+    background-color: rgb(37, 37, 38);
+    width: 430px;
+    top: 35px;
+    right: 0px;
+    bottom: 22px;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
     margin: 0;
-    padding: 20px;
-    border-bottom-left-radius: 8px;
-    background-color: #333333;
+    padding: 10px;
 }
 
 #search input[type=text] {
@@ -214,9 +183,15 @@ body {
 }
 
 .content {
-    width: 74%;
-    margin: 0 0.5%;
-    padding: 0 20px 20px;
+    position: fixed;
+    top: 35px;
+    bottom: 22px;
+    left: 0;
+    right: 430px;
+    overflow: hidden;
+    overflow-y: auto;
+    margin: 0;
+    background-color: rgb(33, 33, 33);
 }
 
 .trending-subreddits {
@@ -224,9 +199,7 @@ body {
 }
 
 #siteTable {
-    background-color: #333333;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    background-color: #212121;
     padding: 10px;
 }
 
@@ -433,6 +406,8 @@ label {
 .res-showImages-highlightNSFWButton .thing.over18 .expando-button::before {
     content: "\f06a" !important;
 }
+
+
 /** Hide these pieces of shit **/
 
 .res-icon,
@@ -445,8 +420,10 @@ label {
 .trending-subreddits .rank-spacer,
 .trending-subreddits .midcol-spacer,
 #sr-header-area,
-.recommended-link {
-    display: none;
+.recommended-link,
+#RESAccountSwitcherIcon,
+.res-tabmenu-button {
+    display: none !important;
 }
 
 .trending-subreddits strong {
@@ -456,4 +433,13 @@ label {
 .titlebox form.toggle,
 .leavemoderator {
     background: none;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    transition: opacity .8s linear;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(121, 121, 121, 0.4);
 }
