@@ -209,6 +209,10 @@ body {
     float: right;
 }
 
+.comment {
+    position: relative;
+}
+
 .content {
     position: fixed;
     top: 35px;
@@ -232,17 +236,19 @@ body {
 
 .link {
     width: 100%;
-    min-height: 125px;
+    min-height: 130px;
     float: left;
     position: relative;
     margin: 0 0 35px;
     padding: 0;
 
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     border-radius: 5px;
     background: rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .3);
     
     overflow-x: auto !important;
+    overflow-y: hidden;
 }
 
 body>.content .link .rank,
@@ -318,7 +324,7 @@ body>.content .link .midcol,
 
 .content .link .flat-list {
     position: absolute;
-    left: 28px;
+    left: 10px;
     bottom: 0px;
     font-size: 14px;
 }
@@ -327,11 +333,25 @@ body>.content .link .midcol,
     font-size: 14px;
     position: absolute;
     right: 18px;
-    bottom: -22px;
+    bottom: 0px;
+}
+
+.tagline {
+    display: block;
 }
 
 .entry {
     padding: 0 10px;
+}
+
+.entry .buttons li a {
+    font-weight: normal;
+    font-size: 1.0em;
+}
+
+.thing .title,
+.md a {
+    font-size: 1.14em;
 }
 
 .thing .title,
@@ -459,7 +479,8 @@ label {
 #RESStaticShortcuts,
 #sr-header-area,
 .srDropdownContainer,
-.res-tabmenu-button {
+.res-tabmenu-button,
+.nsfw-stamp {
     display: none !important;
 }
 
