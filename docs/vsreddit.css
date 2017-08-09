@@ -54,7 +54,7 @@ body {
     width: 100%;
     height: 35px;
     background-color: rgb(37, 37, 38);
-    padding: 0 10px 0 0;
+    padding: 0 60px 0 0;
     box-shadow: #000000 0 6px 6px -6px;
     font-size: 0px;
 }
@@ -92,19 +92,19 @@ body {
     border: 1px solid transparent;
     background-color: rgb(45, 45, 45);
     border-left-color: rgb(37, 37, 38);
-    color: rgba(255, 255, 255, 0.498039);
+    color: rgba(255, 255, 255, 0.498039) !important;
 
     text-transform: capitalize;
     font-weight: normal;
 }
 
 #header-bottom-left .tabmenu li a:hover, #header-img:hover::before {
-    color: #fff;
+    color: #fff !important;
 }
 
 #header-bottom-left .tabmenu li.selected a {
-    color: #fff;
-    background-color: rgb(33, 33, 33);
+    color: #fff !important;
+    background-color: rgb(33, 33, 33) !important;
 }
 
 #header-bottom-right {
@@ -186,7 +186,6 @@ body {
     background-image: none;
 }
 
-.redditname,
 .flairtoggle,
 .tagline,
 .users-online:before {
@@ -236,7 +235,7 @@ body {
 
 .link {
     width: 100%;
-    min-height: 130px;
+    min-height: 80px;
     float: left;
     position: relative;
     margin: 0 0 35px;
@@ -249,6 +248,9 @@ body {
     
     overflow-x: auto !important;
     overflow-y: hidden;
+
+    display: flex;
+    overflow: hidden;
 }
 
 body>.content .link .rank,
@@ -265,49 +267,32 @@ body>.content .link .rank,
 
 body>.content .link .midcol,
 .midcol-spacer {
-    float: right;
-    height: 100px;
-}
-
-.link .score {
-    position: absolute;
-    top: 15px;
-}
-
-.arrow.up,
-.arrow.upmod,
-.arrow.down,
-.arrow.downmod {
-    position: absolute;
-    top: 35px;
-    right: 35px;
-}
-
-.arrow.down,
-.arrow.downmod {
-    right: 17px;
+    height: 50px;
 }
 
 .thumbnail {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
 }
 
 .thumbnail img {
-    height: auto;
-    width: auto;
-    max-width: 100px;
-    max-height: 100px;
+    height: 50px !important;
+    width: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
 }
 
 .thumbnail.default,
 .thumbnail.self,
 .thumbnail.image,
 .thumbnail.nsfw {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    max-width: 50px;
     background-image: url("https://rukiaxi.github.io/vsreddit/images/default.png");
-    background-position: initial;
+    background-position: center;
+    background-size: 50px 50px;
 }
 
 .thumbnail.self {
@@ -357,29 +342,33 @@ body>.content .link .midcol,
 .thing .title,
 .md a,
 a {
-    color: #FFCB6B;
+    color: #FFCB6B !important;
 }
 
 .thing .title:visited,
 .md a:visited,
 a:visited {
-    color: #82AAFF;
+    color: #82AAFF !important;
 }
 
 .md blockquote,
 .md del {
     opacity: 0.8;
-    color: #545454;
+    color: #f5f5f5 !important;
 }
 
 .res .RES-keyNav-activeElement,
 .res .RES-keyNav-activeElement .md-container {
     background-color: transparent !important;
+    border: 0;
+}
+
+.res-expando-box .res-media-independent {
+    position: relative !important;
 }
 
 .link.last-clicked {
     border: 0;
-    overflow: visible;
 }
 
 ul.tabmenu.formtab {
@@ -480,7 +469,8 @@ label {
 #sr-header-area,
 .srDropdownContainer,
 .res-tabmenu-button,
-.nsfw-stamp {
+.nsfw-stamp,
+.rank {
     display: none !important;
 }
 
@@ -545,10 +535,7 @@ label {
 }
 
 #openRESPrefs {
-    position: absolute;
-    bottom: 5px;
-    width: 100%;
-    text-align: center;
+    display: none;
 }
 
 .expando, .res-expando-box {
@@ -583,4 +570,73 @@ label {
     margin-left: 0px !important;
     margin-top: 5px !important;
     margin-right: 5px !important;
+}
+
+.flair, .linkflairlabel {
+    background: #555;
+    color: #f5f5f5;
+    border: 0;;
+}
+
+.arrow {
+    background-image: none !important;
+
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    text-align: center;
+}
+
+.arrow.up:before {
+    content: "\f055";
+}
+
+.arrow.down:before {
+    content: "\f056";
+}
+
+.arrow.up {
+    color: rgba(0, 255, 0, 0.7);
+
+    position: relative;
+    left: 5px;
+    top: 35px;
+}
+
+.arrow.down {
+    color: rgba(255, 0, 0, 0.7);
+
+    position: relative;
+    left: 23px;
+}
+
+.arrow.down.login-required.access-required:hover, 
+.arrow.up.login-required.access-required:hover {
+    color: #fff;
+}
+
+.midcol {
+    position: relative;
+    width: 40px !important;
+    min-width: 40px !important;
+    max-width: 40px !important;
+}
+
+div[data-type='comment'] .midcol {
+    height: 60px;
+    margin-right: 0px;
+}
+
+div[data-type='comment'] .midcol .arrow.down,
+div[data-type='comment'] .midcol .arrow.up {
+    position: absolute;
+
+    font-size: 14px;
+    display: block;
+
+    top: 2px;
 }
