@@ -144,7 +144,7 @@ body {
 }
 
 #header-bottom-right a {
-    color: #fff;
+    color: #fff !important;
 }
 
 #header-bottom-right .user {
@@ -206,6 +206,7 @@ body {
 
 .trending-subreddits .comments {
     float: right;
+    color: #888 !important;
 }
 
 .comment {
@@ -233,6 +234,10 @@ body {
     padding: 10px;
 }
 
+.debuginfo {
+    display: none;
+}
+
 .link {
     width: 100%;
     min-height: 80px;
@@ -244,7 +249,7 @@ body {
     margin-bottom: 10px;
     border-radius: 5px;
     background: rgba(0, 0, 0, .1);
-    border: 1px solid rgba(0, 0, 0, .3);
+    border: 1px solid rgba(0, 0, 0, .2);
     
     overflow-x: auto !important;
     overflow-y: hidden;
@@ -332,6 +337,7 @@ body>.content .link .midcol,
 .entry .buttons li a {
     font-weight: normal;
     font-size: 1.0em;
+    color: #888 !important;
 }
 
 .thing .title,
@@ -592,15 +598,15 @@ label {
 }
 
 .arrow.up:before {
-    content: "\f055";
+    content: "\f139";
 }
 
 .arrow.down:before {
-    content: "\f056";
+    content: "\f13a";
 }
 
 .arrow.up {
-    color: rgba(0, 255, 0, 0.7);
+    color: rgba(255, 255, 255, 0.6);
 
     position: relative;
     left: 5px;
@@ -608,7 +614,7 @@ label {
 }
 
 .arrow.down {
-    color: rgba(255, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.6);
 
     position: relative;
     left: 23px;
@@ -639,4 +645,12 @@ div[data-type='comment'] .midcol .arrow.up {
     display: block;
 
     top: 2px;
+}
+
+a.expando-button {
+    color: #AAA !important;
+}
+
+a.expando-button:hover {
+    color: #FFF !important;
 }
